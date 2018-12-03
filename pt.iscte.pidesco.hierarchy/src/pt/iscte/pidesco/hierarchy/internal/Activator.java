@@ -1,4 +1,4 @@
-package pt.iscte.pidesco.hierarchy;
+package pt.iscte.pidesco.hierarchy.internal;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

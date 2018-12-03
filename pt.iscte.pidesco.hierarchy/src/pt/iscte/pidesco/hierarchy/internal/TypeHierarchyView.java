@@ -1,6 +1,7 @@
-package pt.iscte.pidesco.hierarchy;
+package pt.iscte.pidesco.hierarchy.internal;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Map;
 import org.eclipse.jface.text.ITextSelection;
 import org.eclipse.jface.viewers.TreeViewer;
@@ -29,7 +30,7 @@ import pt.iscte.pidesco.projectbrowser.service.ProjectBrowserServices;
 public class TypeHierarchyView implements PidescoView {
 
 	private Label label_1;
-
+	
 
 
 	/**
@@ -49,16 +50,20 @@ public class TypeHierarchyView implements PidescoView {
 		ServiceReference<JavaEditorServices> serviceReference2 = context.getServiceReference(JavaEditorServices.class);
 		JavaEditorServices javaServ = context.getService(serviceReference2);
 
-		final Tree tree = new Tree(viewArea, SWT.V_SCROLL | SWT.H_SCROLL);
-		//tree.setSize(290, 260);
+		final Tree tree = new Tree(viewArea, SWT.VIRTUAL);
+		tree.setSize(500,500);
 		if (javaServ.getOpenedFile() != (null)) {
 			TreeItem treeItem0 = new TreeItem(tree, 0);
-			treeItem0.setText(javaServ.getOpenedFile().getAbsolutePath());
+		
+				treeItem0.setText(javaServ.getOpenedFile().getName());
+		
 			TreeItem treeItem1 = new TreeItem(treeItem0, 0);
-	        treeItem1.setText("Level 1 Item ");
+	        //treeItem1.setText(javaServ.getOpenedFile().get);
 			viewArea.layout();
 		}
 
+		
+		
 		javaServ.addListener(new JavaEditorListener.Adapter() {
 			@Override
 			public void fileOpened(File file) {

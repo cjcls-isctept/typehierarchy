@@ -6,7 +6,7 @@
          name="Type Hierarchy"
          point="pt.iscte.pidesco.view">
       <view
-            class="pt.iscte.pidesco.hierarchy.TypeHierarchyView"
+            class="pt.iscte.pidesco.hierarchy.internal.TypeHierarchyView"
             icon="icon_type_h.png">
       </view>
    </extension>

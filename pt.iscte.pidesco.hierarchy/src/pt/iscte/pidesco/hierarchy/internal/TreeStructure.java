@@ -1,4 +1,4 @@
-package pt.iscte.pidesco.hierarchy;
+package pt.iscte.pidesco.hierarchy.internal;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
