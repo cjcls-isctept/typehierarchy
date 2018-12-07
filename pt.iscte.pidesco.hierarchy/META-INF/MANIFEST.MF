@@ -11,7 +11,10 @@ Require-Bundle: org.eclipse.core.runtime,
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Automatic-Module-Name: pt.iscte.pidesco.hierarchy
 Bundle-ActivationPolicy: lazy
-Import-Package: org.eclipse.jface.text,
+Import-Package: org.eclipse.jdt.core,
+ org.eclipse.jdt.core.compiler,
+ org.eclipse.jdt.core.dom,
+ org.eclipse.jface.text,
  org.eclipse.jface.viewers,
  org.eclipse.ui.internal.dialogs,
  pt.iscte.pidesco.javaeditor.service,
